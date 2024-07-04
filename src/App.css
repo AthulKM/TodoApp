@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+.ta-center {
   text-align: center;
 }
+button {
+  font-weight: 900;
+}
+.GreenButton {
+  background: green;
+  font-size: 20px;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.RedButton {
+  background:red;
+  font-size: 20px;
+
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.YellowButton {
+  background: yellow;
+  font-size: 20px;
+  color: green;
+
+}
+.AddButton {
+  font-size: 25px;
+  font-weight: 900;
+  color: green;
+  background: whitesmoke;
+}
+body {
+  width: 100%;
+  position: relative;
+  min-height: 1000px !important;
+  
+}
+#root {
+  
+  width: 100%;
+  
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 400px;
+  left: 500px;
+}
+.App .MainHeading h2 {
+  
+  font-size: 50px;
+  color: green;
+    box-shadow: 3px 5px gray;
+}
+.container {
+  position: absolute;
+  position: relative;
+  top: 0;
+  left:0;
+  width: 100%;
+
+  margin: 0 auto;
+  height: 100%;
+  min-height: 1000px;
+  
+  background-image: url("../img/todo_bg.jpg");
+ background-size: cover;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+span.Task, input.Task {
+  border: 3px solid green;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: skyblue;
+  color: maroon;
+  font-weight: 650;
+  text-transform: capitalize;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.InputAndButton .AddButton{
+  margin-left: 30px;
+  background: rgb(143, 213, 73);
+  color: rgb(16, 70, 117);
+}
+.InputAndButton input {
+  height: 50px;
+  border-radius: 8px;
+  padding-left: 5px;
+  background: aliceblue;
+  color: brown;
+  font-weight: 800;
 }
 
-.card {
-  padding: 2em;
+.InputAndButton input, .InputAndButton button {
+  vertical-align: middle;
+}
+.ListDisplay p {
+  color: brown;
 }
 
-.read-the-docs {
-  color: #888;
+.ListDisplay li {
+  margin-top: 5px;
+  display: flex;
+  grid-gap: 10px;
 }

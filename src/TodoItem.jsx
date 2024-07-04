@@ -19,15 +19,15 @@ const TodoItem = ({ index, todo, removeTodo, completeTodo, updateTodo }) => {
   return (
     <li style={completedStyle}>
       {isEditing ? (
-        <input type="text" value={editText} onChange={handleEditChange} />
+        <input className="Task" type="text" value={editText} onChange={handleEditChange} />
       ) : (
-        <span onClick={handleComplete}>{todo.text}</span>
+        <span className='Task' onClick={handleComplete}>{todo.text}</span>
       )}
-      <button onClick={handleDelete}>Delete</button>
+      <button className="RedButton" onClick={handleDelete}>Delete</button>
       {isEditing ? (
-        <button onClick={handleUpdate}>Update</button>
+        <button className="GreenButton" onClick={handleUpdate}>Update</button>
       ) : (
-        <button onClick={() => setIsEditing(true)}>Edit</button>
+        <button className="YellowButton" onClick={() => setIsEditing(true)}>Edit</button>
       )}
     </li>
   );

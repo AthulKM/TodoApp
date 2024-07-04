@@ -12,27 +12,34 @@ const TodoList = () => {
     }
   };
   return (
-    <div>
-      <input type="text" placeholder="Add a Todo" value={newTodo }
+    <>
+      <div className="InputAndButton ta-center">
+        <input type="text" placeholder="Add a Todo" value={newTodo}
+          
       onChange={(e) => setNewTodo(e.target.value)} />
-      <button onClick={handleAddTodo}>Add</button>
-      {todos.length > 0 ? (
-        <ul>
-          {todos.map((todo, index) => (
-            <TodoItem
-              key={index}
-              index={index}
-              todo={todo}
-              removeTodo={removeTodo}
-              completeTodo={completeTodo}
-              updateTodo={updateTodo}
-            />
-          ))}
-        </ul>
-      ) : (
-        <p>No tasks yet!</p>
-      )}
-    </div>
+      <button className="AddButton" onClick={handleAddTodo}>Add</button>
+      
+      </div>
+      <div className="ListDisplay ta-center">
+        {todos.length > 0 ? (
+          <ul type="none">
+            {todos.map((todo, index) => (
+              <TodoItem
+                key={index}
+                index={index}
+                todo={todo}
+                removeTodo={removeTodo}
+                completeTodo={completeTodo}
+                updateTodo={updateTodo}
+              />
+            ))}
+          </ul>
+        ) : (
+          <p>No tasks yet!</p>
+        )}
+      </div>
+    </>
+    
   );
 };
 
